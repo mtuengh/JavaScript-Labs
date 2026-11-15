@@ -2,48 +2,548 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Labs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6fa;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        h1 { color: #243b53; }
-        .container {
-            max-width: 650px;
-            margin: 30px auto;
-        }
-        a {
-            display: block;
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 2px 8px #00000015;
-        }
-        a:hover { background: #e8f0ff; }
-    </style>
-</head>
-<body>
-    <h1>JavaScript Labs</h1>
-    <p>Lab 08 – Lab 09 – Lab 10</p>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Labs | Pink Portfolio</title>
 
-    <div class="container">
-<a href="https://mtuengh.github.io/JavaScript-Labs/Lab08/lab08-walkthrough08.html">            Lab 08 – JavaScript Foundations
-        </a>
-        <a href="Lab09/lab09-walkthrough04.html">
-            Lab 09 – DOM and Events
-        </a>
-        <a href="Lab10/lab10-walkthrough06.html">
-            Lab 10 – jQuery
-        </a>
+  <style>
+    :root {
+      --bg: #fff2f8;
+      --pink: #db4c8d;
+      --pink-dark: #b83274;
+      --pink-light: #fce1ee;
+      --text: #71304f;
+      --muted: #98677f;
+      --border: #f5d1e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(120deg, #b83274, #ed83b1);
+      color: white;
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      margin: 12px 0;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 15px auto;
+      line-height: 1.7;
+      color: #fff0f6;
+    }
+
+    .eyebrow {
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffe0ee;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .stat {
+      padding: 12px 20px;
+      background: #ffffff25;
+      border: 1px solid #ffffff55;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 40px 20px 70px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .intro h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    #search {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 15px;
+      outline-color: var(--pink);
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filters button {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .filters button:hover,
+    .filters button.active {
+      background: var(--pink);
+      color: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(290px, 1fr)
+      );
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 6px 22px #d14c8912;
+    }
+
+    .card h2 {
+      margin: 12px 0;
+      font-size: 23px;
+    }
+
+    .card > p {
+      color: var(--muted);
+      line-height: 1.6;
+      min-height: 50px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--pink-light);
+      color: var(--pink-dark);
+      border-radius: 20px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .exercise {
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .exercise strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .exercise small {
+      display: block;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .exercise a {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--pink);
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .exercise a:hover {
+      background: var(--pink-dark);
+      transform: translateY(-2px);
+    }
+
+    .missing {
+      display: inline-block;
+      margin-top: 12px;
+      background: #fce1ee;
+      color: #9b5675;
+      padding: 10px 14px;
+      border-radius: 9px;
+      font-size: 13px;
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px;
+    }
+
+    footer {
+      text-align: center;
+      background: #fce1ee;
+      padding: 30px 20px;
+      color: var(--text);
+    }
+
+    footer a {
+      color: var(--pink-dark);
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 45px 18px;
+      }
+
+      .filters button {
+        padding: 10px 12px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="eyebrow">
+      ✿ WEB DEVELOPMENT PORTFOLIO ✿
     </div>
+
+    <h1>JavaScript Labs ♡</h1>
+
+    <p>
+      Tổng hợp kết quả thực hành JavaScript,
+      DOM & Events và jQuery thuộc học phần
+      Phát triển ứng dụng Thương mại điện tử.
+    </p>
+
+    <div class="stats">
+      <div class="stat">♡ 03 Labs</div>
+      <div class="stat">♡ JavaScript · DOM · jQuery</div>
+      <div class="stat">♡ GitHub Pages</div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <h2>Danh sách bài thực hành 🌸</h2>
+      <p>
+        Chọn Lab hoặc tìm kiếm Exercise
+        để xem mã nguồn và kết quả thực hành.
+      </p>
+    </div>
+
+    <div class="toolbar">
+
+      <input
+        type="text"
+        id="search"
+        placeholder="🔎 Tìm Exercise, ví dụ: 8.8 hoặc Animation"
+      >
+
+      <div class="filters">
+        <button class="active" data-filter="all">
+          Tất cả
+        </button>
+
+        <button data-filter="08">
+          Lab 08
+        </button>
+
+        <button data-filter="09">
+          Lab 09
+        </button>
+
+        <button data-filter="10">
+          Lab 10
+        </button>
+      </div>
+
+    </div>
+
+    <div id="labs" class="grid"></div>
+
+    <p id="empty" class="empty" hidden>
+      Không tìm thấy Exercise phù hợp.
+    </p>
+
+  </main>
+
+  <footer>
+    <p>
+      ♡ JavaScript Labs – Phát triển ứng dụng TMĐT ♡
+    </p>
+
+    <a
+      href="https://github.com/mtuengh/JavaScript-Labs"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Xem mã nguồn trên GitHub
+    </a>
+  </footer>
+
+  <script>
+    const labs = [
+      {
+        id: "08",
+        title: "JavaScript Foundations",
+        description:
+          "Kiến thức nền tảng về biến, kiểu dữ liệu, mảng, hàm và đối tượng.",
+
+        exercises: [
+          ["8.1", "Enabling / Disabling JavaScript", ""],
+
+          ["8.2", "Inline JavaScript",
+            "lab08-walkthrough02.html"],
+
+          ["8.3", "External JavaScript",
+            "lab08-walkthrough02.html"],
+
+          ["8.4", "Noscript",
+            "lab08-walkthrough02.html"],
+
+          ["8.5", "Debugging JavaScript",
+            "lab08-walkthrough02.html"],
+
+          ["8.6", "JavaScript Types",
+            "lab08-walkthrough06.html"],
+
+          ["8.7", "Arrays and Loops",
+            "lab08-walkthrough07.html"],
+
+          ["8.8", "Functions and Scope",
+            "lab08-walkthrough08.html"],
+
+          ["8.9", "Functions and Parameters", ""],
+
+          ["8.10", "JavaScript Objects", ""],
+
+          ["8.11", "Arrays of Objects", ""]
+        ]
+      },
+
+      {
+        id: "09",
+        title: "DOM and Events",
+        description:
+          "Thao tác DOM, xử lý sự kiện, biểu mẫu và kiểm tra dữ liệu.",
+
+        exercises: [
+          ["9.1", "DOM Selection", ""],
+
+          ["9.2", "DOM Family Relations", ""],
+
+          ["9.3", "Modifying the DOM", ""],
+
+          ["9.4", "Event Handling",
+            "lab09-walkthrough04.html"],
+
+          ["9.5", "Load Events",
+            "lab09-walkthrough05.html"],
+
+          ["9.6", "Debugging Events",
+            "lab09-walkthrough05.html"],
+
+          ["9.7", "Working with Forms", ""],
+
+          ["9.8", "Form Validation", ""]
+        ]
+      },
+
+      {
+        id: "10",
+        title: "jQuery",
+        description:
+          "jQuery Selectors, Events, DOM, Animation và GET Requests.",
+
+        exercises: [
+          ["10.1", "Set Up jQuery", ""],
+
+          ["10.2", "Basic Selectors", ""],
+
+          ["10.3", "Advanced Selectors", ""],
+
+          ["10.4", "jQuery Listeners", ""],
+
+          ["10.5", "Inserting DOM Elements", ""],
+
+          ["10.6", "Simple jQuery Animation",
+            "lab10-walkthrough06.html"],
+
+          ["10.7", "More jQuery Animation", ""],
+
+          ["10.8", "Complex Animations", ""],
+
+          ["10.9", "GET Requests", ""],
+
+          ["10.10", "jqXHR Handling", ""]
+        ]
+      }
+    ];
+
+    let selectedLab = "all";
+    let keyword = "";
+
+    function render() {
+      const container = document.getElementById("labs");
+      const empty = document.getElementById("empty");
+
+      container.innerHTML = "";
+      let total = 0;
+
+      labs
+        .filter(lab =>
+          selectedLab === "all" ||
+          lab.id === selectedLab
+        )
+        .forEach(lab => {
+
+          const items = lab.exercises.filter(ex =>
+            (ex[0] + " " + ex[1])
+              .toLowerCase()
+              .includes(keyword)
+          );
+
+          if (items.length === 0) return;
+
+          total += items.length;
+
+          const card = document.createElement("section");
+          card.className = "card";
+
+          const tag = document.createElement("div");
+          tag.className = "tag";
+          tag.textContent = "♡ LAB " + lab.id;
+          card.appendChild(tag);
+
+          const title = document.createElement("h2");
+          title.textContent = lab.title;
+          card.appendChild(title);
+
+          const description = document.createElement("p");
+          description.textContent = lab.description;
+          card.appendChild(description);
+
+          items.forEach(ex => {
+
+            const item = document.createElement("div");
+            item.className = "exercise";
+
+            const name = document.createElement("strong");
+            name.textContent = "Exercise " + ex[0];
+            item.appendChild(name);
+
+            const detail = document.createElement("small");
+            detail.textContent = ex[1];
+            item.appendChild(detail);
+
+            if (ex[2]) {
+              const link = document.createElement("a");
+
+              link.href =
+                "Lab" + lab.id + "/" + ex[2];
+
+              link.textContent = "Mở bài thực hành ♡";
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+
+              item.appendChild(link);
+            } else {
+              const missing = document.createElement("span");
+
+              missing.className = "missing";
+              missing.textContent = "Chưa liên kết bài thực hành";
+
+              item.appendChild(missing);
+            }
+
+            card.appendChild(item);
+          });
+
+          container.appendChild(card);
+        });
+
+      empty.hidden = total > 0;
+    }
+
+    document
+      .getElementById("search")
+      .addEventListener("input", function () {
+
+        keyword = this.value.toLowerCase().trim();
+        render();
+
+      });
+
+    document
+      .querySelectorAll("[data-filter]")
+      .forEach(button => {
+
+        button.addEventListener("click", function () {
+
+          selectedLab = this.dataset.filter;
+
+          document
+            .querySelectorAll("[data-filter]")
+            .forEach(btn =>
+              btn.classList.remove("active")
+            );
+
+          this.classList.add("active");
+
+          render();
+        });
+      });
+
+    render();
+  </script>
+
 </body>
 </html>
