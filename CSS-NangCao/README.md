@@ -1,9 +1,9 @@
 # CSS Nâng Cao — Lab 07: Advanced CSS – Layout
 
 ## 1. Thông tin
-- Họ và tên: **[Điền họ và tên]**
-- MSSV: **[Điền MSSV]**
-- Lớp học phần: **[Điền lớp học phần]**
+- Họ và tên: **Nguyễn Hiếu Minh Tuệ**
+- MSSV: **31241024317**
+- Lớp học phần: **26C1INF50902701**
 - GitHub: https://github.com/mtuengh
 - Trang GitHub Pages (nếu lưu trong repo JavaScript-Labs): https://mtuengh.github.io/JavaScript-Labs/CSS-NangCao/
 
