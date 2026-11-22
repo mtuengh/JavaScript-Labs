@@ -1,0 +1,47 @@
+.float-gallery::after {
+    content:"";
+    display:block;
+    clear:both
+}
+
+.float-gallery article {
+    float:left;
+    width:30%;
+    min-height:135px;
+    margin:1.66%;
+    background:#f6eeff;
+    border:1px solid #e1ccf6;
+    border-radius:13px;
+    padding:18px
+}
+
+.float-gallery span {
+    display:block;
+    color:#b591d5;
+    font-weight:900;
+    font-size:28px
+}
+
+.float-gallery strong {
+    display:block;
+    font-size:15px
+}
+
+.float-gallery small {
+    color:#697c6d
+}
+
+@media(max-width:600px) {
+    .float-gallery article {
+        width:46%;
+        margin:2%
+    }
+
+}
+
+@media(max-width:350px) {
+    .float-gallery article {
+        width:96%
+    }
+
+}

@@ -1,0 +1,48 @@
+.float-container,.clearfix-container {
+    background:#fff3db;
+    padding:13px;
+    border:2px dashed #eac88c;
+    border-radius:12px;
+    margin-bottom:22px;
+    min-height:75px
+}
+
+.float-container {
+    display:flow-root
+}
+
+.clearfix-container::after {
+    content:"";
+    display:block;
+    clear:both
+}
+
+.float-box {
+    float:left;
+    width:130px;
+    height:95px;
+    border-radius:10px;
+    background:#c7a7f0;
+    color:#44266c;
+    text-align:center;
+    padding:32px 6px;
+    font-weight:800;
+    margin:0 16px 5px 0
+}
+
+.float-box.right {
+    float:right;
+    margin:0 0 5px 16px;
+    background:#a4e5d1
+}
+
+.float-container p,.clearfix-container p {
+    margin:7px 0
+}
+
+@media(max-width:550px) {
+    .float-box {
+        width:96px
+    }
+
+}

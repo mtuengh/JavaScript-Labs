@@ -1,0 +1,49 @@
+.site-header {
+    display:block
+}
+
+.site-header b {
+    display:inline-block
+}
+
+.mobile-menu {
+    display:block;
+    float:right;
+    padding:6px 10px;
+    border:1px solid #9676ac;
+    border-radius:8px;
+    font-size:12px
+}
+
+.responsive-menu {
+    display:none;
+    clear:both;
+    padding-top:14px
+}
+
+.responsive-menu a {
+    display:block;
+    padding:11px 4px;
+    border-top:1px solid #634b76
+}
+
+#menu-toggle:checked~.responsive-menu {
+    display:block
+}
+
+.responsive-hero {
+    padding:24px 16px
+}
+
+.responsive-icon {
+    font-size:47px
+}
+
+.responsive-products {
+    display:block
+}
+
+.responsive-products article {
+    margin:10px 0;
+    padding:14px
+}

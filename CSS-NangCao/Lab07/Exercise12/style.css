@@ -1,0 +1,103 @@
+.responsive-site {
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #d8cdea
+}
+
+.site-header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:20px;
+    background:#33234f;
+    color:#fff
+}
+
+.site-header b {
+    font-size:21px
+}
+
+.site-header b span {
+    color:#ffb384
+}
+
+.responsive-menu a {
+    text-decoration:none;
+    color:#fff;
+    padding:8px;
+    font-size:13px;
+    font-weight:700
+}
+
+.responsive-hero {
+    background:#eee2ff;
+    min-height:180px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+
+.responsive-hero h2 {
+    font-size:clamp(23px,3vw,38px);
+    line-height:1.2;
+    margin:9px 0
+}
+
+.responsive-hero p {
+    max-width:470px
+}
+
+.responsive-hero small {
+    letter-spacing:2px;
+    font-size:10px;
+    font-weight:800;
+    color:#845ba5
+}
+
+.responsive-icon {
+    font-size:100px;
+    color:#af8fdf;
+    line-height:1
+}
+
+.responsive-products {
+    padding:15px;
+    background:#faf7ff
+}
+
+.responsive-products article {
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    border:1px solid #e7d9f6
+}
+
+.responsive-products span {
+    font-size:32px;
+    color:#b7a2dc;
+    font-weight:900
+}
+
+.responsive-products strong {
+    display:block
+}
+
+.responsive-products p {
+    margin:4px 0;
+    font-size:13px
+}
+
+.visually-hidden {
+    position:absolute;
+    left:-9999px
+}
+
+.mobile-menu {
+    cursor:pointer
+}
+
+.responsive-site .note {
+    padding:2px 16px 16px
+}

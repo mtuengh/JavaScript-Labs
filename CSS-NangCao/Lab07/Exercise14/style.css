@@ -1,0 +1,73 @@
+.transform-grid {
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:20px;
+    text-align:center;
+    padding:23px 8px
+}
+
+.transform-grid>div {
+    display:grid;
+    justify-items:center;
+    gap:20px;
+    font-size:12px
+}
+
+.transform-box {
+    display:grid;
+    place-items:center;
+    width:90px;
+    height:90px;
+    border-radius:14px;
+    background:#cfbef0;
+    font-size:35px;
+    transition:transform .4s
+}
+
+.rotate {
+    transform:rotate(12deg)
+}
+
+.skew {
+    background:#b7eade;
+    transform:skewX(16deg)
+}
+
+.translate {
+    background:#ffddbf;
+    transform:translateY(-13px)
+}
+
+.scale {
+    background:#dfd4f5;
+    transform:scale(1.15)
+}
+
+.rotate:hover {
+    transform:rotate(40deg)
+}
+
+.skew:hover {
+    transform:skewX(32deg)
+}
+
+.translate:hover {
+    transform:translate(10px,-32px)
+}
+
+.scale:hover {
+    transform:scale(1.35)
+}
+
+@media(max-width:700px) {
+    .transform-grid {
+        grid-template-columns:repeat(2,1fr);
+        row-gap:30px
+    }
+
+    .transform-box {
+        width:72px;
+        height:72px
+    }
+
+}

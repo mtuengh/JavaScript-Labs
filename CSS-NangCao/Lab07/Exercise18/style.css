@@ -1,0 +1,84 @@
+.animation-stage {
+    height:250px;
+    border-radius:16px;
+    background:linear-gradient(130deg,#f7f0ff,#e8f9f3);
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    overflow:hidden
+}
+
+.ball {
+    width:70px;
+    height:70px;
+    background:#ffbb8d;
+    border-radius:50%;
+    box-shadow:inset -10px -10px #e99d75;
+    animation:bounce 1.2s ease-in-out infinite
+}
+
+.spinner {
+    font-size:85px;
+    color:#8367bc;
+    animation:spin 3s linear infinite
+}
+
+.pulse {
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#a3e6d8;
+    color:#22635c;
+    font-weight:900;
+    animation:pulse 1.5s ease-in-out .5s infinite alternate
+}
+
+.animation-facts {
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    color:#655681;
+    font-size:12px;
+    padding-top:12px
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform:translateY(35px)
+    }
+
+    50% {
+        transform:translateY(-45px)
+    }
+
+}
+
+@keyframes spin {
+    to {
+        transform:rotate(360deg)
+    }
+
+}
+
+@keyframes pulse {
+    from {
+        transform:scale(.86);
+        opacity:.7
+    }
+
+    to {
+        transform:scale(1.18);
+        opacity:1
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .ball,.spinner,.pulse {
+        animation:none!important
+    }
+
+}

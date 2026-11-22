@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Exercise 7.19 – Using Bootstrap | CSS Nâng Cao
+  </title>
+  <meta content="Lab 07 – Using Bootstrap: Sử dụng Bootstrap grid, navbar, panel tương đương, list-group, jumbotron tương đương, buttons và nested columns." name="description"/>
+  <link href="../../assets/exercise.css" rel="stylesheet"/>
+  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="crumb" href="../../index.html">
+    ← Về trang chủ Lab 07
+   </a>
+   <span class="toplabel">
+    CSS NÂNG CAO
+    <b>
+     ·
+    </b>
+    EXERCISE 7.19
+   </span>
+  </header>
+  <main class="lesson">
+   <section class="lesson-head">
+    <p class="eyebrow">
+     LAB 07 / ADVANCED CSS
+    </p>
+    <h1>
+     Using Bootstrap
+    </h1>
+    <p>
+     Sử dụng Bootstrap grid, navbar, panel tương đương, list-group, jumbotron tương đương, buttons và nested columns.
+    </p>
+   </section>
+   <section class="example">
+    <div class="example-header">
+     <strong>
+      Minh họa trực tiếp
+     </strong>
+     <span>
+      HTML + CSS · chỉnh kích thước cửa sổ để thử
+     </span>
+    </div>
+    <div class="container-fluid p-0">
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded-3 px-3 mb-4">
+      <a class="navbar-brand" href="#">
+       WeBuy Lab
+      </a>
+      <button aria-controls="labNav" aria-expanded="false" aria-label="Mở menu" class="navbar-toggler" data-bs-target="#labNav" data-bs-toggle="collapse" type="button">
+       <span class="navbar-toggler-icon">
+       </span>
+      </button>
+      <div class="collapse navbar-collapse" id="labNav">
+       <div class="navbar-nav ms-auto">
+        <a class="nav-link active" href="#grid">
+         Trang chủ
+        </a>
+        <a class="nav-link" href="#components">
+         Thành phần
+        </a>
+        <a class="nav-link" href="#nested">
+         Grid lồng
+        </a>
+       </div>
+      </div>
+     </nav>
+     <div class="jumbotron demo-jumbotron rounded-4 p-4 p-md-5 mb-4">
+      <p class="text-uppercase fw-bold small">
+       Bootstrap grid system
+      </p>
+      <h2>
+       Thiết kế giao diện nhanh hơn
+      </h2>
+      <p>
+       Ví dụ có navbar, jumbotron tương đương, panel/card, list-group, button và nested columns.
+      </p>
+      <a class="btn btn-warning" href="#grid">
+       Khám phá grid
+      </a>
+     </div>
+     <div class="row g-3" id="grid">
+      <div class="col-12 col-md-4">
+       <div class="panel demo-panel h-100">
+        <div class="panel-heading">
+         Panel / Card A
+        </div>
+        <div class="panel-body">
+         Cột 1:
+         <code>
+          col-md-4
+         </code>
+        </div>
+       </div>
+      </div>
+      <div class="col-12 col-md-4">
+       <div class="panel demo-panel h-100">
+        <div class="panel-heading">
+         Panel / Card B
+        </div>
+        <div class="panel-body">
+         Cột 2:
+         <code>
+          col-md-4
+         </code>
+        </div>
+       </div>
+      </div>
+      <div class="col-12 col-md-4">
+       <div class="panel demo-panel h-100">
+        <div class="panel-heading">
+         Panel / Card C
+        </div>
+        <div class="panel-body">
+         Cột 3:
+         <code>
+          col-md-4
+         </code>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row g-4 mt-2" id="components">
+      <div class="col-md-5">
+       <h3 class="h5">
+        List group
+       </h3>
+       <div class="list-group">
+        <a class="list-group-item list-group-item-action active" href="#nested">
+         Bootstrap Grid
+        </a>
+        <a class="list-group-item list-group-item-action" href="#nested">
+         Navbar
+        </a>
+        <a class="list-group-item list-group-item-action" href="#nested">
+         Buttons &amp; Components
+        </a>
+       </div>
+      </div>
+      <div class="col-md-7">
+       <h3 class="h5">
+        Buttons
+       </h3>
+       <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-primary">
+         Primary
+        </button>
+        <button class="btn btn-success">
+         Success
+        </button>
+        <button class="btn btn-outline-secondary">
+         Outline
+        </button>
+       </div>
+       <p class="small text-muted mt-3">
+        Dùng Bootstrap 5 offline;
+        <code>
+         .panel
+        </code>
+        /
+        <code>
+         .jumbotron
+        </code>
+        được CSS mô phỏng vì Bootstrap 5 đã bỏ hai component cũ.
+       </p>
+      </div>
+     </div>
+     <div class="row g-3 mt-3" id="nested">
+      <div class="col-12">
+       <h3 class="h5">
+        Nested columns
+       </h3>
+       <div class="bg-light border rounded p-3">
+        <div class="row g-3">
+         <div class="col-sm-6">
+          <div class="p-3 rounded bg-primary text-white">
+           Cột lồng 6/12
+          </div>
+         </div>
+         <div class="col-sm-6">
+          <div class="p-3 rounded bg-success text-white">
+           Cột lồng 6/12
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="takeaway">
+    <strong>
+     Quan sát &amp; ghi nhớ
+    </strong>
+    <p>
+     Sử dụng Bootstrap grid, navbar, panel tương đương, list-group, jumbotron tương đương, buttons và nested columns.
+    </p>
+   </section>
+   <nav class="lesson-nav">
+    <a href="../Exercise18/index.html">
+     ← Bài trước
+    </a>
+    <a href="../../index.html#exercises">
+     Danh sách 19 bài
+    </a>
+    <a href="../../index.html">
+     Hoàn thành ✓
+    </a>
+   </nav>
+  </main>
+  <footer class="footer">
+   Bài thực hành CSS nâng cao · Exercise 7.19
+  </footer>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js">
+  </script>
+ </body>
+</html>

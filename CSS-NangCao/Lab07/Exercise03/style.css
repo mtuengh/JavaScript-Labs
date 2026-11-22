@@ -1,0 +1,62 @@
+.position-card {
+    position:relative;
+    min-height:305px;
+    background:linear-gradient(135deg,#f1e7ff,#e4f8f3);
+    border:3px dashed #b5a0d5;
+    border-radius:18px
+}
+
+.stamp {
+    position:absolute;
+    background:#6b4da3;
+    color:#fff;
+    padding:9px 12px;
+    border-radius:9px;
+    font-size:11px;
+    font-weight:800
+}
+
+.top-left {
+    top:12px;
+    left:12px
+}
+
+.top-right {
+    top:12px;
+    right:12px
+}
+
+.bottom-left {
+    bottom:12px;
+    left:12px
+}
+
+.bottom-right {
+    bottom:12px;
+    right:12px
+}
+
+.center-label {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    font-weight:800;
+    color:#715397;
+    letter-spacing:1px
+}
+
+.center-label small {
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0
+}
+
+@media(max-width:480px) {
+    .stamp {
+        font-size:9px;
+        padding:7px
+    }
+
+}

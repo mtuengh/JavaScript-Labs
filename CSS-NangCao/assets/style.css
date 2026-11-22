@@ -1,0 +1,389 @@
+:root {
+    --bg:#fcfaff;
+    --ink:#2c2240;
+    --muted:#746b86;
+    --purple:#7652bb;
+    --accent:#faad8a;
+    --line:#e7dff1
+}
+
+* {
+    box-sizing:border-box
+}
+
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    margin:0;
+    font-family:Arial,'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6
+}
+
+a {
+    color:#6f4caa
+}
+
+a:focus-visible {
+    outline:3px solid #ec9c6d;
+    outline-offset:3px
+}
+
+.wrap {
+    max-width:1120px;
+    margin:auto;
+    padding:0 20px
+}
+
+.hero {
+    background:radial-gradient(circle at 80% 25%,#d5f8ee 0%,transparent 27%),radial-gradient(circle at 8% 76%,#f8dada 0%,transparent 29%),linear-gradient(130deg,#f7eaff,#fff9f6);
+    border-bottom:1px solid var(--line);
+    padding-bottom:70px
+}
+
+.top {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:25px 0;
+    gap:20px
+}
+
+.brand {
+    font-size:17px;
+    font-weight:900;
+    letter-spacing:.4px
+}
+
+.nav-btn {
+    border:1px solid #d1bde6;
+    text-decoration:none;
+    background:#fff;
+    border-radius:30px;
+    padding:10px 17px;
+    font-size:13px;
+    font-weight:700
+}
+
+.hero-content {
+    display:grid;
+    grid-template-columns:minmax(0,1.4fr) 335px;
+    gap:38px;
+    align-items:center;
+    padding-top:60px
+}
+
+.eyebrow,.kicker {
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2.6px;
+    color:#8056ae;
+    text-transform:uppercase
+}
+
+.hero h1 {
+    font-size:clamp(44px,6vw,76px);
+    letter-spacing:-3px;
+    line-height:1.07;
+    margin:14px 0 21px;
+    max-width:700px
+}
+
+.hero h1 span {
+    color:#8e5bd1
+}
+
+.hero-content>div>p {
+    max-width:600px;
+    font-size:17px;
+    color:#6d6379
+}
+
+.chips {
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-top:28px
+}
+
+.chips span {
+    padding:6px 15px;
+    background:#fff;
+    border:1px solid #e3d7ef;
+    border-radius:25px;
+    font-size:12px;
+    font-weight:800
+}
+
+.student {
+    background:#fff;
+    padding:30px;
+    border-radius:23px;
+    border:1px solid #e4d8f0;
+    box-shadow:0 22px 50px #47356e16
+}
+
+.avatar {
+    width:75px;
+    height:75px;
+    border-radius:23px;
+    background:linear-gradient(140deg,#d7bdf9,#a4ebdc);
+    display:grid;
+    place-items:center;
+    color:#654099;
+    font-size:27px;
+    font-weight:900;
+    margin-bottom:18px
+}
+
+.student-title {
+    font-weight:800;
+    font-size:17px;
+    margin:0 0 16px
+}
+
+.student dl {
+    margin:0
+}
+
+.student dt {
+    font-size:11px;
+    color:#988e9e;
+    margin-top:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.9px
+}
+
+.student dd {
+    margin:3px 0;
+    font-size:14px;
+    font-weight:800
+}
+
+.student a {
+    display:block;
+    font-weight:800;
+    margin-top:22px
+}
+
+.student small {
+    display:block;
+    color:#92899a;
+    font-size:11px;
+    margin-top:10px
+}
+
+main {
+    padding-top:50px;
+    padding-bottom:85px
+}
+
+section {
+    margin-bottom:78px
+}
+
+.intro {
+    max-width:850px
+}
+
+.kicker {
+    margin:0 0 7px
+}
+
+h2 {
+    font-size:clamp(26px,4vw,35px);
+    line-height:1.2;
+    margin:0 0 16px
+}
+
+.intro>p:last-child,.reflection>p:last-child {
+    font-size:16px;
+    color:#726b80
+}
+
+.section-heading {
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    align-items:end;
+    margin-bottom:25px
+}
+
+.section-heading>p {
+    max-width:340px;
+    color:var(--muted);
+    font-size:13px
+}
+
+.exercise-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    list-style:none;
+    padding:0;
+    margin:0;
+    gap:13px
+}
+
+.exercise {
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+    min-height:150px;
+    padding:19px;
+    background:#fff;
+    border:1px solid #e8e1ef;
+    border-radius:15px;
+    transition:transform .2s,box-shadow .2s
+}
+
+.exercise:hover {
+    transform:translateY(-4px);
+    box-shadow:0 13px 25px #44337713
+}
+
+.number {
+    font-size:12px;
+    color:#8b67b9;
+    font-weight:900;
+    letter-spacing:1px
+}
+
+.exercise-info strong,.exercise-info small {
+    display:block
+}
+
+.exercise-info strong {
+    font-size:16px
+}
+
+.exercise-info small {
+    color:#8c8194;
+    font-size:12px
+}
+
+.open {
+    text-decoration:none;
+    background:#eee4fd;
+    color:#6f4eab;
+    padding:7px 13px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:800;
+    align-self:flex-start;
+    margin-top:auto
+}
+
+.open:hover {
+    background:#d7c3f4
+}
+
+.note {
+    color:#816c89;
+    background:#f5edff;
+    border-radius:11px;
+    padding:13px;
+    font-size:12px;
+    margin-top:22px
+}
+
+.skill-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:14px
+}
+
+.skill-grid article {
+    background:#f4f0fa;
+    border:1px solid #e8e0ef;
+    border-radius:18px;
+    padding:23px
+}
+
+.skill-grid span {
+    font-weight:900;
+    color:#a481cb
+}
+
+.skill-grid h3 {
+    margin:15px 0 8px;
+    font-size:19px
+}
+
+.skill-grid p {
+    margin:0;
+    color:#766a84;
+    font-size:13px
+}
+
+.reflection {
+    background:linear-gradient(120deg,#ede3ff,#e8f7f1);
+    border-radius:24px;
+    padding:30px
+}
+
+.reflection p:last-child {
+    max-width:930px;
+    margin:0
+}
+
+footer {
+    background:#302341;
+    color:#ddd2e8;
+    padding:27px 0;
+    font-size:12px
+}
+
+@media(max-width:920px) {
+    .hero-content {
+        grid-template-columns:1fr
+    }
+
+    .student {
+        max-width:460px
+    }
+
+    .exercise-grid {
+        grid-template-columns:repeat(2,1fr)
+    }
+
+}
+
+@media(max-width:580px) {
+    .hero {
+        padding-bottom:40px
+    }
+
+    .hero-content {
+        padding-top:20px;
+        gap:30px
+    }
+
+    .hero h1 {
+        letter-spacing:-2px
+    }
+
+    .hero-content>div>p {
+        font-size:15px
+    }
+
+    .exercise-grid,.skill-grid {
+        grid-template-columns:1fr
+    }
+
+    .section-heading {
+        display:block
+    }
+
+    .student {
+        padding:22px
+    }
+
+    .reflection {
+        padding:22px
+    }
+
+}

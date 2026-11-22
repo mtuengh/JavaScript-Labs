@@ -1,0 +1,23 @@
+.transition-demo {
+    text-align:center;
+    padding:50px 10px
+}
+
+.transition-button {
+    border:0;
+    border-radius:14px;
+    background:#7450af;
+    color:#fff;
+    cursor:pointer;
+    padding:20px 30px;
+    font-size:17px;
+    font-weight:800;
+    transition:background-color .4s ease,color .4s ease,transform .4s ease,box-shadow .4s ease
+}
+
+.transition-button:hover,.transition-button:focus-visible {
+    background:#ffb17b;
+    color:#422744;
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px #7655a835
+}

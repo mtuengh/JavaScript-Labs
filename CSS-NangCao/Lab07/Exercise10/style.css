@@ -1,0 +1,59 @@
+.two-col::after {
+    content:"";
+    display:block;
+    clear:both
+}
+
+.sidebar {
+    float:left;
+    width:195px;
+    padding:18px;
+    background:#e8dcf9;
+    border-radius:12px
+}
+
+.sidebar strong,.sidebar a {
+    display:block
+}
+
+.sidebar a {
+    font-size:13px;
+    padding:6px 0;
+    text-decoration:none
+}
+
+.content {
+    margin-left:215px;
+    padding:18px;
+    background:#f1faf6;
+    border-radius:12px;
+    min-height:250px
+}
+
+.content h2 {
+    font-size:23px;
+    margin:0 0 10px
+}
+
+.products-row {
+    display:flex;
+    gap:10px
+}
+
+.products-row .tile {
+    flex:1;
+    font-size:12px
+}
+
+@media(max-width:620px) {
+    .sidebar {
+        float:none;
+        width:100%;
+        margin-bottom:12px
+    }
+
+    .content {
+        margin-left:0
+    }
+
+}

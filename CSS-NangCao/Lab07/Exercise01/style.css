@@ -1,0 +1,33 @@
+.group {
+    margin:0 0 28px
+}
+
+.block-demo {
+    display:block;
+    background:#d9cbf8;
+    padding:11px;
+    margin:6px 0;
+    border-radius:8px;
+    max-width:440px;
+    font-weight:700
+}
+
+.inline-demo {
+    display:inline;
+    background:#ffe0c5;
+    padding:7px;
+    margin-right:7px
+}
+
+.inline-block-demo {
+    display:inline-block;
+    width:180px;
+    height:64px;
+    vertical-align:top;
+    background:#bdebe2;
+    border-radius:9px;
+    padding:17px;
+    margin:5px;
+    font-size:12px;
+    font-weight:800
+}

@@ -1,0 +1,42 @@
+.advanced-transitions {
+    min-height:300px;
+    display:grid;
+    place-items:center
+}
+
+.advanced-card {
+    border:2px solid #d6c8ec;
+    border-radius:18px;
+    width:min(100%,310px);
+    padding:25px;
+    background:#f2e9ff;
+    box-shadow:0 4px 10px #43315e18;
+    transition:transform .5s ease,background-color .7s ease,border-radius .8s ease-in-out,box-shadow .5s .1s,letter-spacing .4s
+}
+
+.advanced-card span {
+    font-size:35px;
+    color:#9a72c2
+}
+
+.advanced-card h2 {
+    font-size:22px;
+    margin:10px 0
+}
+
+.advanced-card p {
+    font-size:13px
+}
+
+.advanced-card a {
+    color:#6740a5;
+    font-weight:800
+}
+
+.advanced-card:hover {
+    transform:translateY(-14px) scale(1.03);
+    background:#d8f5eb;
+    border-radius:42px;
+    box-shadow:0 25px 30px #43315e30;
+    letter-spacing:.4px
+}

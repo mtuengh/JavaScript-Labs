@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Exercise 7.12 – Media Queries &amp; Viewport (7.12 + 7.13) | CSS Nâng Cao
+  </title>
+  <meta content="Lab 07 – Media Queries &amp; Viewport (7.12 + 7.13): Tách desktop.css/mobile.css theo media query; có meta viewport, menu responsive và bố cục đa thiết bị." name="description"/>
+  <link href="../../assets/exercise.css" rel="stylesheet"/>
+  <link href="desktop.css" media="(min-width: 761px)" rel="stylesheet"/>
+  <link href="mobile.css" media="(max-width: 760px)" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="crumb" href="../../index.html">
+    ← Về trang chủ Lab 07
+   </a>
+   <span class="toplabel">
+    CSS NÂNG CAO
+    <b>
+     ·
+    </b>
+    EXERCISE 7.12
+   </span>
+  </header>
+  <main class="lesson">
+   <section class="lesson-head">
+    <p class="eyebrow">
+     LAB 07 / ADVANCED CSS
+    </p>
+    <h1>
+     Media Queries &amp; Viewport (7.12 + 7.13)
+    </h1>
+    <p>
+     Tách desktop.css/mobile.css theo media query; có meta viewport, menu responsive và bố cục đa thiết bị.
+    </p>
+   </section>
+   <section class="example">
+    <div class="example-header">
+     <strong>
+      Minh họa trực tiếp
+     </strong>
+     <span>
+      HTML + CSS · chỉnh kích thước cửa sổ để thử
+     </span>
+    </div>
+    <div class="responsive-site" id="viewport-demo">
+     <header class="site-header">
+      <b>
+       WeBuy
+       <span>
+        ·
+       </span>
+       Lab
+      </b>
+      <input aria-label="Mở hoặc đóng menu" class="visually-hidden" id="menu-toggle" type="checkbox"/>
+      <label class="mobile-menu" for="menu-toggle" role="button">
+       ☰ Danh mục
+      </label>
+      <nav aria-label="Menu ví dụ" class="responsive-menu">
+       <a href="#features">
+        Trang chủ
+       </a>
+       <a href="#features">
+        Sản phẩm
+       </a>
+       <a href="#features">
+        Giới thiệu
+       </a>
+       <a href="#features">
+        Liên hệ
+       </a>
+      </nav>
+     </header>
+     <div class="responsive-hero">
+      <div>
+       <small>
+        EXERCISE 7.12 + 7.13
+       </small>
+       <h2>
+        Responsive cho mọi màn hình
+       </h2>
+       <p>
+        Desktop: menu ngang, ba thẻ trên một hàng. Mobile: menu ẩn/mở và các thẻ xếp dọc.
+       </p>
+      </div>
+      <span aria-hidden="true" class="responsive-icon">
+       ▣
+      </span>
+     </div>
+     <div class="responsive-products" id="features">
+      <article>
+       <span>
+        01
+       </span>
+       <strong>
+        Desktop
+       </strong>
+       <p>
+        ≥ 761px
+       </p>
+      </article>
+      <article>
+       <span>
+        02
+       </span>
+       <strong>
+        Mobile
+       </strong>
+       <p>
+        ≤ 760px
+       </p>
+      </article>
+      <article>
+       <span>
+        03
+       </span>
+       <strong>
+        Viewport
+       </strong>
+       <p>
+        width=device-width
+       </p>
+      </article>
+     </div>
+     <p class="note">
+      Exercise 7.13: thẻ &lt;meta name="viewport" ...&gt; đặt trong &lt;head&gt;; menu có thể mở bằng checkbox CSS mà không cần JavaScript.
+     </p>
+    </div>
+   </section>
+   <section class="takeaway">
+    <strong>
+     Quan sát &amp; ghi nhớ
+    </strong>
+    <p>
+     Tách desktop.css/mobile.css theo media query; có meta viewport, menu responsive và bố cục đa thiết bị.
+    </p>
+   </section>
+   <nav class="lesson-nav">
+    <a href="../Exercise11/index.html">
+     ← Bài trước
+    </a>
+    <a href="../../index.html#exercises">
+     Danh sách 19 bài
+    </a>
+    <a href="../Exercise14/index.html">
+     Bài tiếp theo →
+    </a>
+   </nav>
+  </main>
+  <footer class="footer">
+   Bài thực hành CSS nâng cao · Exercise 7.12
+  </footer>
+ </body>
+</html>

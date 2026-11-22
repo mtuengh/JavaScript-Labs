@@ -1,0 +1,68 @@
+.stacking-demo {
+    position:relative;
+    height:280px;
+    max-width:530px;
+    margin:auto;
+    background:repeating-linear-gradient(0deg,#f8f4fd 0 25px,#fff 25px 50px);
+    border-radius:12px
+}
+
+.layer {
+    position:absolute;
+    width:145px;
+    height:125px;
+    display:grid;
+    place-content:center;
+    text-align:center;
+    border:3px solid #fff;
+    border-radius:15px;
+    box-shadow:0 4px 15px #4c35752d;
+    font-weight:900;
+    font-size:25px
+}
+
+.layer small {
+    font-size:12px
+}
+
+.layer-a {
+    z-index:1;
+    top:34px;
+    left:12%;
+    background:#ad9bed
+}
+
+.layer-b {
+    z-index:3;
+    top:96px;
+    left:35%;
+    background:#ffb47f
+}
+
+.layer-c {
+    z-index:2;
+    top:52px;
+    left:59%;
+    background:#a4e8d7
+}
+
+@media(max-width:500px) {
+    .layer {
+        width:100px;
+        height:105px;
+        font-size:20px
+    }
+
+    .layer-a {
+        left:4%
+    }
+
+    .layer-b {
+        left:29%
+    }
+
+    .layer-c {
+        left:54%
+    }
+
+}

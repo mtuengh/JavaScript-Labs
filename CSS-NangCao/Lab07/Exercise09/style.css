@@ -1,0 +1,54 @@
+.photo-card {
+    position:relative;
+    max-width:760px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 15px 30px #44266a21
+}
+
+.photo-card img {
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover
+}
+
+.photo-card figcaption {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:60px 22px 20px;
+    color:#fff;
+    background:linear-gradient(transparent,#241846d9)
+}
+
+.photo-card h2 {
+    margin:10px 0 2px;
+    font-size:28px
+}
+
+.photo-card p {
+    margin:0
+}
+
+.badge-photo {
+    background:#ffb07a;
+    color:#4b2b25;
+    padding:5px 12px;
+    border-radius:99px;
+    font-size:12px;
+    font-weight:800
+}
+
+@media(max-width:600px) {
+    .photo-card h2 {
+        font-size:19px
+    }
+
+    .photo-card p {
+        font-size:11px
+    }
+
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Exercise 7.06 – Floating in a Container | CSS Nâng Cao
+  </title>
+  <meta content="Lab 07 – Floating in a Container: Giữ container ôm trọn phần tử float bằng clearfix hoặc display: flow-root." name="description"/>
+  <link href="../../assets/exercise.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="crumb" href="../../index.html">
+    ← Về trang chủ Lab 07
+   </a>
+   <span class="toplabel">
+    CSS NÂNG CAO
+    <b>
+     ·
+    </b>
+    EXERCISE 7.06
+   </span>
+  </header>
+  <main class="lesson">
+   <section class="lesson-head">
+    <p class="eyebrow">
+     LAB 07 / ADVANCED CSS
+    </p>
+    <h1>
+     Floating in a Container
+    </h1>
+    <p>
+     Giữ container ôm trọn phần tử float bằng clearfix hoặc display: flow-root.
+    </p>
+   </section>
+   <section class="example">
+    <div class="example-header">
+     <strong>
+      Minh họa trực tiếp
+     </strong>
+     <span>
+      HTML + CSS · chỉnh kích thước cửa sổ để thử
+     </span>
+    </div>
+    <p class="demo-label">
+     Container A dùng
+     <code>
+      display: flow-root
+     </code>
+    </p>
+    <div class="float-container">
+     <div class="float-box">
+      float: left
+     </div>
+     <p>
+      Khung nền trắng-vàng vẫn bao quanh toàn bộ ô màu tím, dù phần tử đó đã float khỏi normal flow.
+     </p>
+    </div>
+    <p class="demo-label">
+     Container B dùng clearfix
+     <code>
+      ::after
+     </code>
+    </p>
+    <div class="clearfix-container">
+     <div class="float-box right">
+      float: right
+     </div>
+     <p>
+      Kỹ thuật clearfix cũng sửa hiện tượng container mất chiều cao do toàn bộ phần tử con bị float.
+     </p>
+    </div>
+   </section>
+   <section class="takeaway">
+    <strong>
+     Quan sát &amp; ghi nhớ
+    </strong>
+    <p>
+     Giữ container ôm trọn phần tử float bằng clearfix hoặc display: flow-root.
+    </p>
+   </section>
+   <nav class="lesson-nav">
+    <a href="../Exercise05/index.html">
+     ← Bài trước
+    </a>
+    <a href="../../index.html#exercises">
+     Danh sách 19 bài
+    </a>
+    <a href="../Exercise07/index.html">
+     Bài tiếp theo →
+    </a>
+   </nav>
+  </main>
+  <footer class="footer">
+   Bài thực hành CSS nâng cao · Exercise 7.06
+  </footer>
+ </body>
+</html>

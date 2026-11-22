@@ -1,0 +1,48 @@
+.clear-wrap {
+    border:2px dashed #d1b7ea;
+    padding:12px;
+    border-radius:12px
+}
+
+.float-col {
+    padding:20px;
+    border-radius:12px;
+    min-height:175px
+}
+
+.left-col {
+    float:left;
+    width:30%;
+    background:#e5d7fa
+}
+
+.right-col {
+    float:right;
+    width:66%;
+    background:#d4f4ed
+}
+
+.float-col p {
+    font-size:13px
+}
+
+.clear-footer {
+    clear:both;
+    padding:15px;
+    border-radius:10px;
+    background:#ffe1c9;
+    color:#724b2c;
+    margin-top:13px;
+    text-align:center
+}
+
+@media(max-width:480px) {
+    .float-col {
+        padding:12px
+    }
+
+    .float-col p {
+        font-size:11px
+    }
+
+}
